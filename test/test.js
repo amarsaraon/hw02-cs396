@@ -587,6 +587,10 @@ describe("/companions/crossover", function () {
 
     this.timeout(10000);
     
+    beforeEach(done => {
+        resetDB(done);
+    });
+
     describe("GET", () => {
 
         it("should show all companions that travelled with two or more doctors.", done => {
